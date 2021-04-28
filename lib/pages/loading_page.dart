@@ -9,8 +9,26 @@ class LoadingPage extends StatelessWidget {
       height: 500,
       width: 500,
       decoration: BoxDecoration(color: Colors.orange),
-      child: Center(
-        child: Text("GitMello"),
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 48),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                "GitMello",
+                style: TextStyle(),
+              ),
+              Center(
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(), hintText: "Git Username"),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     ));
   }

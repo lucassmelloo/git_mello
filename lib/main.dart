@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:git_mello/core/app_widget.dart';
+import 'package:git_mello/pages/loading_page.dart';
 
 void main() {
-  runApp(AppWidget());
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "GitMello",
+      home: LoadingPage(),
+    );
+  }
 }
