@@ -1,13 +1,14 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-class LoadingPage extends StatelessWidget {
+class ConsultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      height: 500,
-      width: 500,
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(color: Colors.orange),
       child: SafeArea(
         child: Padding(
@@ -16,6 +17,7 @@ class LoadingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              /* Image(image: FlareActore), */
               Text(
                 "GitMello",
                 style: TextStyle(),
