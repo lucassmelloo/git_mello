@@ -1,6 +1,7 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:git_mello/core/app_images.dart';
 
 class ConsultPage extends StatelessWidget {
   @override
@@ -18,14 +19,17 @@ class ConsultPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               /* Image(image: FlareActore), */
-              Text(
-                "GitMello",
-                style: TextStyle(),
+              Image.asset(AppImages.logo),
+              SizedBox(
+                height: 10,
               ),
               Center(
                 child: TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(), hintText: "Git Username"),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25)),
+                    hintText: "Git Username",
+                  ),
                 ),
               )
             ],
