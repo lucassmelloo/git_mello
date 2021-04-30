@@ -1,7 +1,10 @@
 import 'dart:core';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:git_mello/core/app_colors.dart';
 import 'package:git_mello/core/app_images.dart';
+import 'package:git_mello/core/core.dart';
 
 class ConsultPage extends StatelessWidget {
   @override
@@ -10,7 +13,7 @@ class ConsultPage extends StatelessWidget {
         body: Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(color: Colors.orange),
+      decoration: BoxDecoration(color: AppColor.orange),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 48),
@@ -21,7 +24,7 @@ class ConsultPage extends StatelessWidget {
               /* Image(image: FlareActore), */
               Image.asset(AppImages.logo),
               SizedBox(
-                height: 10,
+                height: 36,
               ),
               Center(
                 child: TextField(
@@ -29,6 +32,8 @@ class ConsultPage extends StatelessWidget {
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25)),
                     hintText: "Git Username",
+                    fillColor: Colors.white,
+                    filled: true,
                   ),
                 ),
               )
