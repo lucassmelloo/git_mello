@@ -5,6 +5,7 @@ import 'package:flutter/rendering.dart';
 import 'package:git_mello/core/app_colors.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/core/core.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ConsultPage extends StatelessWidget {
   @override
@@ -22,12 +23,23 @@ class ConsultPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               /* Image(image: FlareActore), */
-              Image.asset(AppImages.logo),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("Git"),
+                  Image.asset(
+                    AppImages.logo,
+                    width: 100,
+                  ),
+                  Text("Mello")
+                ],
+              ),
               SizedBox(
                 height: 36,
               ),
               Center(
                 child: TextField(
+                  style: GoogleFonts.roboto(),
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25)),
