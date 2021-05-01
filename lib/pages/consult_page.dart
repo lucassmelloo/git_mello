@@ -1,5 +1,4 @@
 import 'dart:core';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:git_mello/core/app_colors.dart';
@@ -41,12 +40,15 @@ class ConsultPage extends StatelessWidget {
                 child: TextField(
                   style: GoogleFonts.roboto(),
                   decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25)),
-                    hintText: "Git Username",
-                    fillColor: Colors.white,
-                    filled: true,
-                  ),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                      hintText: "Git Username",
+                      fillColor: Colors.white,
+                      filled: true,
+                      suffixIcon: IconButton(
+                        onPressed: () {},
+                        icon: Icon(Icons.clear),
+                      )),
                 ),
               )
             ],
