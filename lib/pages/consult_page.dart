@@ -37,18 +37,27 @@ class ConsultPage extends StatelessWidget {
                 height: 36,
               ),
               Center(
-                child: TextField(
-                  style: GoogleFonts.roboto(),
-                  decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25)),
-                      hintText: "Git Username",
-                      fillColor: Colors.white,
-                      filled: true,
-                      suffixIcon: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.clear),
-                      )),
+                child: Column(
+                  children: [
+                    TextField(
+                      style: GoogleFonts.roboto(),
+                      decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(25)),
+                          hintText: "Git Username",
+                          fillColor: Colors.white,
+                          filled: true,
+                          suffixIcon: IconButton(
+                            onPressed: () {},
+                            icon: Icon(Icons.clear),
+                          )),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.navigate_next),
+                      onPressed: () {},
+                      color: Colors.white,
+                    )
+                  ],
                 ),
               )
             ],
