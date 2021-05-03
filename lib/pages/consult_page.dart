@@ -27,7 +27,7 @@ class ConsultPage extends StatelessWidget {
                 children: [
                   Text("Git"),
                   Image.asset(
-                    AppImages.logo,
+                    AppImages.logowhite,
                     width: 100,
                   ),
                   Text("Mello")
