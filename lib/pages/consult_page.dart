@@ -13,7 +13,7 @@ class ConsultPage extends StatelessWidget {
         body: Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(color: AppColor.orange),
+      decoration: BoxDecoration(color: AppColors.orange),
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 48),
@@ -23,14 +23,13 @@ class ConsultPage extends StatelessWidget {
             children: [
               /* Image(image: FlareActore), */
               Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Git"),
                   Image.asset(
-                    AppImages.logowhite,
-                    width: 100,
+                    AppImages.logo,
+                    width: 300,
                   ),
-                  Text("Mello")
                 ],
               ),
               SizedBox(
@@ -45,17 +44,22 @@ class ConsultPage extends StatelessWidget {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25)),
                           hintText: "Git Username",
-                          fillColor: Colors.white,
+                          fillColor: AppColors.white,
                           filled: true,
                           suffixIcon: IconButton(
                             onPressed: () {},
                             icon: Icon(Icons.clear),
                           )),
                     ),
-                    IconButton(
-                      icon: Icon(Icons.navigate_next),
-                      onPressed: () {},
-                      color: Colors.white,
+                    Ink(
+                      decoration: const ShapeDecoration(
+                        color: Colors.blue,
+                        shape: CircleBorder(),
+                      ),
+                      child: IconButton(
+                        icon: Icon(Icons.navigate_next),
+                        onPressed: () {},
+                      ),
                     )
                   ],
                 ),
