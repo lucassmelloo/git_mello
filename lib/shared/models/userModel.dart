@@ -1,0 +1,3 @@
+class User {
+  String gitUser;
+}
