@@ -1,16 +1,15 @@
-# git_mello
+# git.mello
 
-A new Flutter project.
+Um projeto em Flutter para a vizualização de perfis do github
 
-## Getting Started
+## Etapas de conclusão!
 
-This project is a starting point for a Flutter application.
+- [x] Consult page (Tela de consulta)
+- [x] Splash page (Tela de carregamento)
+- [ ] Rersult page (Tela de resultado)
+- [x] Usercard (Result page widget)
+- [ ] Repositorycard (Result page widget)
+- [ ] Read from JSON (Utilizar a leitura por JSON)
+- [ ] Integration with Github api (Integrar a aplicação com a API do Github)
+- [ ] Final (Finalizando a aplicação!)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
