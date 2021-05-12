@@ -34,7 +34,7 @@ class _ResultPageState extends State<ResultPage> {
         decoration: BoxDecoration(gradient: AppGradients.linear),
         child: SafeArea(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            UserCard(
+            OwnerCard(
               owner: controller.owner,
             ),
             SizedBox(height: 15),

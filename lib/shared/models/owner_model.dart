@@ -3,8 +3,8 @@ import 'dart:convert';
 class OwnerModel {
   final String username;
   final String name;
-  final int stars;
   final String photoUrl;
+  final int stars;
   final int qtyRepo;
   final int following;
 

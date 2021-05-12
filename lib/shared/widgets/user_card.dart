@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:git_mello/core/core.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
-class UserCard extends PreferredSize {
+class OwnerCard extends PreferredSize {
   final OwnerModel owner;
 
-  UserCard({this.owner})
+  OwnerCard({this.owner})
       : super(
           preferredSize: Size.fromHeight(125),
           child: Container(
@@ -43,10 +43,10 @@ class UserCard extends PreferredSize {
                         ),
                         Row(
                           children: [
-                            Text(
-                              "lucassmelloo",
+                            Text.rich(TextSpan(
+                              text: owner.username,
                               style: TextStyle(fontSize: 20),
-                            ),
+                            )),
                             SizedBox(
                               width: 25,
                             ),
