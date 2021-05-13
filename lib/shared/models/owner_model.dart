@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 class OwnerModel {
-  final String username;
-  final String name;
-  final String photoUrl;
-  final int stars;
-  final int qtyRepo;
-  final int following;
+  final String name = "Lucas de Mello Vieira";
+  final String username = "lucassmelloo";
+  final String photoUrl = "https://github.com/lucassmelloo.png";
+  final int stars = 2;
+  final int qtyRepo = 11;
+  final int following = 8;
 
-  OwnerModel({
+/*   OwnerModel({
     this.username,
     this.name,
     this.stars,
@@ -42,5 +42,5 @@ class OwnerModel {
   String toJson() => json.encode(toMap());
 
   factory OwnerModel.fromJson(String source) =>
-      OwnerModel.fromMap(json.decode(source));
+      OwnerModel.fromMap(json.decode(source)); */
 }

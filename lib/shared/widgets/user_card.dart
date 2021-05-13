@@ -3,9 +3,7 @@ import 'package:git_mello/core/core.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
 class OwnerCard extends PreferredSize {
-  final OwnerModel owner;
-
-  OwnerCard({this.owner})
+  OwnerCard()
       : super(
           preferredSize: Size.fromHeight(125),
           child: Container(
@@ -44,7 +42,7 @@ class OwnerCard extends PreferredSize {
                         Row(
                           children: [
                             Text.rich(TextSpan(
-                              text: owner.username,
+                              text: "lucassmelloo",
                               style: TextStyle(fontSize: 20),
                             )),
                             SizedBox(
