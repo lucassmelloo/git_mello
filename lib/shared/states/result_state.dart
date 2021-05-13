@@ -1,1 +1,1 @@
-enum ResultState {sucess, loading, error, empty}
+enum ConsultState { waiting, trying, successful, unsuccessful }
