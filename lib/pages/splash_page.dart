@@ -4,6 +4,9 @@ import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
 
 class SplashPage extends StatelessWidget {
+  SplashPage({Key key, this.userConsult}) : super(key: key);
+  final String userConsult;
+
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2)).then((_) => Navigator.pushReplacement(
@@ -25,6 +28,10 @@ class SplashPage extends StatelessWidget {
               ),
               SizedBox(
                 height: 20,
+              ),
+              Text(
+                userConsult,
+                style: TextStyle(fontSize: 32),
               ),
               LinearProgressIndicator(
                 value: 0.6,

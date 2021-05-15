@@ -8,7 +8,22 @@ import 'package:git_mello/core/core.dart';
 import 'package:git_mello/pages/splash_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ConsultPage extends StatelessWidget {
+void callSplashPage(context, userConsult) {
+  Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => SplashPage(userConsult: userConsult)));
+}
+
+class ConsultPage extends StatefulWidget {
+  @override
+  _ConsultPageState createState() => _ConsultPageState();
+}
+
+class _ConsultPageState extends State<ConsultPage> {
+  var _textEditingController = TextEditingController();
+  String userConsult;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +49,7 @@ class ConsultPage extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
+                      controller: _textEditingController,
                       style: GoogleFonts.roboto(),
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -42,9 +58,15 @@ class ConsultPage extends StatelessWidget {
                           fillColor: AppColors.white,
                           filled: true,
                           suffixIcon: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              userConsult = "";
+                              _textEditingController.clear();
+                            },
                             icon: Icon(Icons.clear),
                           )),
+                      onChanged: (String value) async {
+                        userConsult = value;
+                      },
                     ),
                     SizedBox(height: 10),
                     Container(
@@ -55,10 +77,24 @@ class ConsultPage extends StatelessWidget {
                         icon: Icon(Icons.navigate_next),
                         color: AppColors.white,
                         onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SplashPage()));
+                          if (userConsult == "" || userConsult == null) {
+                            showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Text("No user search!"),
+                                    actions: <Widget>[
+                                      TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text("OK"))
+                                    ],
+                                  );
+                                });
+                          } else {
+                            callSplashPage(context, userConsult);
+                          }
                         },
                       ),
                     )
