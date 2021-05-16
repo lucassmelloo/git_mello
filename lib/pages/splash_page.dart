@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
+import 'package:git_mello/pages/unresult_page.dart';
 
 class SplashPage extends StatelessWidget {
   SplashPage({Key key, this.userConsult}) : super(key: key);
@@ -10,7 +11,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2)).then((_) => Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => ResultPage())));
+        context, MaterialPageRoute(builder: (context) => UnresultPage())));
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 class OwnerModel {
   final String name = "Lucas de Mello Vieira";
   final String username = "lucassmelloo";

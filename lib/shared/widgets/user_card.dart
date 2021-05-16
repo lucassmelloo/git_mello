@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/core.dart';
-import 'package:git_mello/shared/models/owner_model.dart';
 
 class OwnerCard extends PreferredSize {
   OwnerCard()
