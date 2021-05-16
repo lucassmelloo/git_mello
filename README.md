@@ -6,7 +6,8 @@ Um projeto em Flutter para a vizualização de perfis do github
 
 - [x] Consult page (Tela de consulta)
 - [x] Splash page (Tela de carregamento)
-- [ ] Rersult page (Tela de resultado)
+- [ ] Unresult page (Tela de resultado)
+- [ ] Result page (Tela de resultado)
 - [x] Usercard (Result page widget)
 - [ ] Repositorycard (Result page widget)
 - [ ] Read from JSON (Utilizar a leitura por JSON)

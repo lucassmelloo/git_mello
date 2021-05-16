@@ -1,44 +1,23 @@
-class OwnerModel {
-  final String name = "Lucas de Mello Vieira";
-  final String username = "lucassmelloo";
-  final String photoUrl = "https://github.com/lucassmelloo.png";
-  final int stars = 2;
-  final int qtyRepo = 11;
-  final int following = 8;
+import 'dart:convert';
 
-/*   OwnerModel({
-    this.username,
-    this.name,
-    this.stars,
-    this.photoUrl,
-    this.qtyRepo,
-    this.following,
-  });
+/* import 'package:http/http.dart' as http;
+
+class OwnerModel {
+  final String name;
+  final String avatar_url;
+  final int stars;
+  final int public_repos;
+  final int following;
 
   Map<String, dynamic> toMap() {
     return {
-      'username': username,
       'name': name,
       'stars': stars,
-      'photoUrl': photoUrl,
-      'qtyRepo': qtyRepo,
+      'avatar_url': avatar_url,
+      'public_repos': public_repos,
       'following': following,
     };
   }
 
-  factory OwnerModel.fromMap(Map<String, dynamic> map) {
-    return OwnerModel(
-      username: map['username'],
-      name: map['name'],
-      stars: map['stars'],
-      photoUrl: map['photoUrl'],
-      qtyRepo: map['qtyRepo'],
-      following: map['following'],
-    );
-  }
-
   String toJson() => json.encode(toMap());
-
-  factory OwnerModel.fromJson(String source) =>
-      OwnerModel.fromMap(json.decode(source)); */
-}
+} */

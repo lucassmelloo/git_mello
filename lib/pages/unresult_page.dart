@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:git_mello/core/core.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class UnresultPage extends StatelessWidget {
   @override
@@ -18,16 +17,37 @@ class UnresultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Row(
+                  Column(
                     children: [
-                      Text(
-                          "Não encontramos \nesse usuario, tente \nbuscar outro nome",
-                          style:
-                              TextStyle(fontSize: 28, color: AppColors.white)),
-                      SizedBox(
-                        width: 20,
+                      Column(
+                        children: [
+                          Image.asset(
+                            AppImages.logo,
+                            width: 250,
+                          ),
+                          Text(";(", style: TextStyle(fontSize: 100)),
+                          SizedBox(
+                            height: 38,
+                          ),
+                          Text(
+                              "We dont found any user with this username. Try another user!",
+                              style: TextStyle(
+                                  fontSize: 28, color: AppColors.white)),
+                        ],
                       ),
-                      Text(");", style: TextStyle(fontSize: 128)),
+                      SizedBox(
+                        width: 28,
+                      ),
+                      Container(
+                        width: 200,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            color: AppColors.blue,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: BackButton(
+                          color: AppColors.white,
+                        ),
+                      )
                     ],
                   ),
                 ],
