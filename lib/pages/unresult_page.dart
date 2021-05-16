@@ -12,7 +12,7 @@ class UnresultPage extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(gradient: AppGradients.linear),
           child: Padding(
-            padding: EdgeInsets.all(50),
+            padding: EdgeInsets.all(25),
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +20,14 @@ class UnresultPage extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(";("),
+                      Text(
+                          "Não encontramos \nesse usuario, tente \nbuscar outro nome",
+                          style:
+                              TextStyle(fontSize: 28, color: AppColors.white)),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(");", style: TextStyle(fontSize: 128)),
                     ],
                   ),
                 ],
