@@ -22,6 +22,7 @@ class ConsultPage extends StatefulWidget {
 
 class _ConsultPageState extends State<ConsultPage> {
   var _textEditingController = TextEditingController();
+  
   String userConsult;
 
   @override

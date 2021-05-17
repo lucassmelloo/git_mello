@@ -1,23 +1,38 @@
 import 'dart:convert';
 
-/* import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as http;
 
 class OwnerModel {
   final String name;
-  final String avatar_url;
-  final int stars;
-  final int public_repos;
+  final String avatarurl;
+  final String stars;
+  final int publicrepos;
   final int following;
+
+  OwnerModel(
+      {this.name,
+      this.avatarurl,
+      this.stars,
+      this.publicrepos,
+      this.following});
 
   Map<String, dynamic> toMap() {
     return {
       'name': name,
       'stars': stars,
-      'avatar_url': avatar_url,
-      'public_repos': public_repos,
+      'avatar_url': avatarurl,
+      'public_repos': publicrepos,
       'following': following,
     };
   }
 
-  String toJson() => json.encode(toMap());
-} */
+  factory OwnerModel.fromJson(Map<String, dynamic> json) {
+    return OwnerModel(
+      name: json['name'],
+      avatarurl: json['avatar_url'],
+      stars: json['starred'],
+      publicrepos: json['public_repos'],
+      following: json['following'],
+    );
+  }
+}
