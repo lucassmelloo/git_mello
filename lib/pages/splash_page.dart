@@ -4,15 +4,23 @@ import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
 import 'package:git_mello/pages/unresult_page.dart';
+import 'package:git_mello/shared/controllers/owner_controller.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
 class SplashPage extends StatelessWidget {
   SplashPage({Key key, this.userConsult}) : super(key: key);
   final String userConsult;
+  final controller = OwnerController();
+  final OwnerModel owner = controller.setOwner(userConsult);
+
   @override
   Widget build(BuildContext context) {
     Future.delayed(Duration(seconds: 2)).then((_) => Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => ResultPage())));
+        context,
+        MaterialPageRoute(
+            builder: (context) => ResultPage(
+                  owner: owner,
+                ))));
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,

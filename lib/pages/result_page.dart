@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/shared/widgets/repository_card.dart';
-import 'package:git_mello/shared/widgets/user_card.dart';
+import 'package:git_mello/shared/widgets/owner_card.dart';
+import 'package:git_mello/shared/models/owner_model.dart';
 
 class ResultPage extends StatefulWidget {
-  ResultPage({Key key}) : super(key: key);
+  final OwnerModel owner;
+  const ResultPage({Key key, this.owner}) : super(key: key);
 
   @override
   _ResultPageState createState() => _ResultPageState();
