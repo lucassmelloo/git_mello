@@ -26,13 +26,16 @@ class OwnerModel {
     };
   }
 
-  factory OwnerModel.fromJson(Map<String, dynamic> json) {
+  factory OwnerModel.fromMap(Map<String, dynamic> map) {
     return OwnerModel(
-      name: json['name'],
-      avatarurl: json['avatar_url'],
-      stars: json['starred'],
-      publicrepos: json['public_repos'],
-      following: json['following'],
+      name: map['name'],
+      avatarurl: map['avatar_url'],
+      stars: map['starred'],
+      publicrepos: map['public_repos'],
+      following: map['following'],
     );
   }
+
+  factory OwnerModel.fromJson(String source) =>
+      OwnerModel.fromMap(json.decode(source));
 }
