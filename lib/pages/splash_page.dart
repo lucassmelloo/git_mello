@@ -1,26 +1,34 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
-import 'package:git_mello/pages/unresult_page.dart';
-import 'package:git_mello/shared/controllers/owner_controller.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
+import 'package:git_mello/pages/unresult_page.dart';
 
-class SplashPage extends StatelessWidget {
+class SplashPage extends StatefulWidget {
   SplashPage({Key key, this.userConsult}) : super(key: key);
   final String userConsult;
-  final controller = OwnerController();
-  final OwnerModel owner = controller.setOwner(userConsult);
 
   @override
-  Widget build(BuildContext context) {
+  _SplashPageState createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
     Future.delayed(Duration(seconds: 2)).then((_) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-            builder: (context) => ResultPage(
-                  owner: owner,
-                ))));
+            builder: (context) =>
+                ResultPage(userConsult: widget.userConsult))));
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -41,7 +49,7 @@ class SplashPage extends StatelessWidget {
                   height: 20,
                 ),
                 Text(
-                  userConsult,
+                  widget.userConsult,
                   style: TextStyle(fontSize: 32),
                 ),
                 LinearProgressIndicator(

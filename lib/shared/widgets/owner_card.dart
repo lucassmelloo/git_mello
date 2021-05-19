@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/core.dart';
+import 'package:git_mello/shared/models/owner_model.dart';
 
 class OwnerCard extends StatelessWidget {
+  final OwnerModel owner;
+  const OwnerCard({Key key, this.owner}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +20,7 @@ class OwnerCard extends StatelessWidget {
             height: 125,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage("https://github.com/lucassmelloo.png"),
+                  image: NetworkImage(owner.avatarurl),
                   fit: BoxFit.fill,
                 ),
                 borderRadius: BorderRadius.circular(15)),
@@ -29,7 +33,7 @@ class OwnerCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Lucas de Mello Vieira",
+                    owner.name,
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -38,11 +42,11 @@ class OwnerCard extends StatelessWidget {
                   Row(
                     children: [
                       Text.rich(TextSpan(
-                        text: "lucassmelloo",
+                        text: owner.login,
                         style: TextStyle(fontSize: 20),
                       )),
                       SizedBox(
-                        width: 25,
+                        width: 15,
                       ),
                       Icon(
                         Icons.star_border,
@@ -67,7 +71,7 @@ class OwnerCard extends StatelessWidget {
                         style: TextStyle(fontSize: 16),
                       ),
                       Text(
-                        "11",
+                        owner.publicrepos.toString(),
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
@@ -79,7 +83,7 @@ class OwnerCard extends StatelessWidget {
                         style: TextStyle(fontSize: 16),
                       ),
                       Text(
-                        "8",
+                        owner.following.toString(),
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),

@@ -5,14 +5,28 @@ import 'package:git_mello/shared/widgets/owner_card.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
 class ResultPage extends StatefulWidget {
-  final OwnerModel owner;
-  const ResultPage({Key key, this.owner}) : super(key: key);
+  final String userConsult;
+
+  const ResultPage({Key key, this.userConsult}) : super(key: key);
 
   @override
   _ResultPageState createState() => _ResultPageState();
 }
 
 class _ResultPageState extends State<ResultPage> {
+  OwnerModel owner;
+
+  @override
+  void initState() {
+    super.initState();
+    loadOwner();
+  }
+
+  Future loadOwner() async {
+    owner = await OwnerModel().setOwner(widget.userConsult);
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +36,10 @@ class _ResultPageState extends State<ResultPage> {
         decoration: BoxDecoration(gradient: AppGradients.linear),
         child: SafeArea(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            OwnerCard(),
+            if (owner != null)
+              OwnerCard(
+                owner: owner,
+              ),
             SizedBox(height: 15),
             RepositoryCard(),
           ]),
