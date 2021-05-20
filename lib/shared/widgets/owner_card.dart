@@ -4,7 +4,7 @@ import 'package:git_mello/shared/models/owner_model.dart';
 
 class OwnerCard extends StatelessWidget {
   final OwnerModel owner;
-  const OwnerCard({Key key, this.owner}) : super(key: key);
+  const OwnerCard({Key? key, required this.owner}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class OwnerCard extends StatelessWidget {
             height: 125,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(owner.avatarurl),
+                  image: NetworkImage("${owner.avatarurl}"),
                   fit: BoxFit.fill,
                 ),
                 borderRadius: BorderRadius.circular(15)),
@@ -33,7 +33,7 @@ class OwnerCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    owner.name,
+                    "${owner.name}",
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,

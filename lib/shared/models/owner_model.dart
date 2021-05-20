@@ -3,15 +3,15 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class OwnerModel {
-  final String name;
-  final String login;
-  final String avatarurl;
-  final int publicrepos;
-  final int following;
+  String? name;
+  String? login;
+  String? avatarurl;
+  int? publicrepos;
+  int? following;
 
   OwnerModel(
-      {this.name,
-      this.login,
+      {this.login,
+      this.name,
       this.avatarurl,
       this.publicrepos,
       this.following});

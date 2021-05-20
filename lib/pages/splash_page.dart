@@ -9,7 +9,7 @@ import 'package:git_mello/shared/models/owner_model.dart';
 import 'package:git_mello/pages/unresult_page.dart';
 
 class SplashPage extends StatefulWidget {
-  SplashPage({Key key, this.userConsult}) : super(key: key);
+  SplashPage({Key? key, required this.userConsult}) : super(key: key);
   final String userConsult;
 
   @override

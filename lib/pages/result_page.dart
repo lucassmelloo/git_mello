@@ -7,14 +7,14 @@ import 'package:git_mello/shared/models/owner_model.dart';
 class ResultPage extends StatefulWidget {
   final String userConsult;
 
-  const ResultPage({Key key, this.userConsult}) : super(key: key);
+  const ResultPage({Key? key, required this.userConsult}) : super(key: key);
 
   @override
   _ResultPageState createState() => _ResultPageState();
 }
 
 class _ResultPageState extends State<ResultPage> {
-  OwnerModel owner;
+  OwnerModel? owner;
 
   @override
   void initState() {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_colors.dart';
 
 class RepositoryCard extends StatelessWidget {
-  const RepositoryCard({Key key}) : super(key: key);
+  const RepositoryCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
