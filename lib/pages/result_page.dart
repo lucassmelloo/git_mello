@@ -13,6 +13,10 @@ class ResultPage extends StatefulWidget {
   _ResultPageState createState() => _ResultPageState();
 }
 
+validationOwner(OwnerModel? owner) {
+  if (owner != null) return owner;
+}
+
 class _ResultPageState extends State<ResultPage> {
   OwnerModel? owner;
 
@@ -36,10 +40,9 @@ class _ResultPageState extends State<ResultPage> {
         decoration: BoxDecoration(gradient: AppGradients.linear),
         child: SafeArea(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            if (owner != null)
-              OwnerCard(
-                owner: owner,
-              ),
+            OwnerCard(
+              owner: validationOwner(owner),
+            ),
             SizedBox(height: 15),
             RepositoryCard(),
           ]),
