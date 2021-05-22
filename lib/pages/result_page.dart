@@ -42,6 +42,7 @@ class _ResultPageState extends State<ResultPage> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             OwnerCard(
               owner: validationOwner(owner),
+              starred: 2,
             ),
             SizedBox(height: 15),
             RepositoryCard(),

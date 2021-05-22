@@ -17,20 +17,10 @@ class OwnerModel {
       this.following});
 
   Future<OwnerModel> setOwner(user) async {
-    final response =
-        await http.get(Uri.parse("https://api.github.com/users/" + user));
+    const String apiGithub = "https://api.github.com/users/";
+    final response = await http.get(Uri.parse(apiGithub + user));
     final owner = OwnerModel.fromJson(response.body);
     return owner;
-  }
-
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'login': login,
-      'avatar_url': avatarurl,
-      'public_repos': publicrepos,
-      'following': following,
-    };
   }
 
   factory OwnerModel.fromMap(Map<String, dynamic> map) {
