@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
+import 'package:git_mello/shared/models/starred_model.dart';
 import 'package:git_mello/shared/widgets/repository_card.dart';
 import 'package:git_mello/shared/widgets/owner_card.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
@@ -41,8 +42,7 @@ class _ResultPageState extends State<ResultPage> {
         child: SafeArea(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             OwnerCard(
-              owner: validationOwner(owner),
-              starred: 2,
+              owner: owner,
             ),
             SizedBox(height: 15),
             RepositoryCard(),

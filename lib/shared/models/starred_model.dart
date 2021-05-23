@@ -3,22 +3,22 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class StarredModel {
-  int? starred;
+  final List<String>? starredName;
 
-  StarredModel({this.starred});
+  StarredModel({this.starredName});
 
-  Future<StarredModel> setOwner(user) async {
+  Future<StarredModel> setStarred(user) async {
     const String apiGithub = "https://api.github.com/users/";
 
     final response = await http.get(Uri.parse(apiGithub + user + "/starred"));
-    final owner = StarredModel.fromJson(response.body);
-    return owner;
+    final starredList = StarredModel.fromJson(response.body);
+    return starredList;
   }
 
   factory StarredModel.fromMap(Map<String, dynamic> map) {
     return StarredModel(
-      starred:map['name']
-      );
+        starredName: List<String>.from(
+            map['name']?.map((x) => StarredModel.fromMap(x))));
   }
 
   factory StarredModel.fromJson(String source) =>

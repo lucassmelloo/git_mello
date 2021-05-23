@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/core.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
+import 'package:git_mello/shared/models/starred_model.dart';
 
 class OwnerCard extends StatelessWidget {
   final OwnerModel? owner;
-  final int? starred;
+  final List<StarredModel>? starred;
   OwnerCard({Key? key, this.owner, this.starred}) : super(key: key);
 
   @override
