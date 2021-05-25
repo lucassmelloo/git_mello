@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
-import 'package:git_mello/shared/models/owner_model.dart';
-import 'package:git_mello/pages/unresult_page.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key? key, required this.userConsult}) : super(key: key);

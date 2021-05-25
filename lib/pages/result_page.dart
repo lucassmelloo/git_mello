@@ -20,6 +20,7 @@ validationOwner(OwnerModel? owner) {
 
 class _ResultPageState extends State<ResultPage> {
   OwnerModel? owner;
+  StarredModel? starred;
 
   @override
   void initState() {
@@ -43,6 +44,7 @@ class _ResultPageState extends State<ResultPage> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             OwnerCard(
               owner: owner,
+              /* starred: starred, */
             ),
             SizedBox(height: 15),
             RepositoryCard(),

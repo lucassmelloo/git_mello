@@ -5,7 +5,7 @@ import 'package:git_mello/shared/models/starred_model.dart';
 
 class OwnerCard extends StatelessWidget {
   final OwnerModel? owner;
-  final List<StarredModel>? starred;
+  final StarredModel? starred;
   OwnerCard({Key? key, this.owner, this.starred}) : super(key: key);
 
   @override
