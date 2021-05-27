@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/core.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
-import 'package:git_mello/shared/models/starred_model.dart';
 
 class OwnerCard extends StatelessWidget {
   final OwnerModel? owner;
-  final StarredModel? starred;
-  OwnerCard({Key? key, this.owner, this.starred}) : super(key: key);
+  OwnerCard({Key? key, this.owner}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,10 +43,13 @@ class OwnerCard extends StatelessWidget {
                     children: [
                       Expanded(
                         flex: 4,
-                        child: Text.rich(TextSpan(
-                          text: owner?.login,
-                          style: TextStyle(fontSize: 20),
-                        )),
+                        child: Text.rich(
+                          TextSpan(
+                            text: owner?.login,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                       Expanded(
                         flex: 1,
@@ -59,7 +60,7 @@ class OwnerCard extends StatelessWidget {
                       ),
                       Text.rich(
                         TextSpan(
-                          text: starred.toString(),
+                          text: owner?.starred.toString(),
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -90,11 +91,15 @@ class OwnerCard extends StatelessWidget {
                       Text(
                         "Following: ",
                         style: TextStyle(fontSize: 14),
+                        overflow: TextOverflow.ellipsis,
                       ),
                       Text.rich(
-                        TextSpan(text: owner?.following.toString()),
+                        TextSpan(
+                          text: owner?.following.toString(),
+                        ),
                         style: TextStyle(
                             fontSize: 14, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   )

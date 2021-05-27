@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
-import 'package:git_mello/shared/models/starred_model.dart';
 import 'package:git_mello/shared/widgets/repository_card.dart';
 import 'package:git_mello/shared/widgets/owner_card.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
@@ -20,7 +19,6 @@ validationOwner(OwnerModel? owner) {
 
 class _ResultPageState extends State<ResultPage> {
   OwnerModel? owner;
-  StarredModel? starred;
 
   @override
   void initState() {
@@ -44,7 +42,6 @@ class _ResultPageState extends State<ResultPage> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             OwnerCard(
               owner: owner,
-              /* starred: starred, */
             ),
             SizedBox(height: 15),
             RepositoryCard(),
