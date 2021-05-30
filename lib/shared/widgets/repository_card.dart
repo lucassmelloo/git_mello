@@ -13,6 +13,10 @@ class RepositoryCard extends StatelessWidget {
         color: AppColors.white,
         borderRadius: BorderRadius.circular(15),
       ),
+      child: Column(
+        
+      ),
     );
   }
+  
 }

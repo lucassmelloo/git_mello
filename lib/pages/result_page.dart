@@ -38,14 +38,21 @@ class _ResultPageState extends State<ResultPage> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(gradient: AppGradients.linear),
-        child: SafeArea(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            OwnerCard(
-              owner: owner,
+        child: Column(
+          children: [
+            SizedBox(height: 10),
+            SafeArea(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    OwnerCard(
+                      owner: owner,
+                    ),
+                    SizedBox(height: 15),
+                    RepositoryCard(),
+                  ]),
             ),
-            SizedBox(height: 15),
-            RepositoryCard(),
-          ]),
+          ],
         ),
       ),
     );

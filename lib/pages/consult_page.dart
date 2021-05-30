@@ -21,7 +21,7 @@ class ConsultPage extends StatefulWidget {
 }
 
 class _ConsultPageState extends State<ConsultPage> {
-  var _textEditingController = TextEditingController();
+  var userConsultController = TextEditingController();
 
   String? userConsult;
 
@@ -50,7 +50,7 @@ class _ConsultPageState extends State<ConsultPage> {
                 child: Column(
                   children: [
                     TextField(
-                      controller: _textEditingController,
+                      controller: userConsultController,
                       style: GoogleFonts.roboto(),
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
@@ -61,7 +61,7 @@ class _ConsultPageState extends State<ConsultPage> {
                           suffixIcon: IconButton(
                             onPressed: () {
                               userConsult = "";
-                              _textEditingController.clear();
+                              userConsultController.clear();
                             },
                             icon: Icon(Icons.clear),
                           )),

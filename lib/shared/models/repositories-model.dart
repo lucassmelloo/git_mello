@@ -7,11 +7,12 @@ class RepositoryModel {
   String? language;
   int? stargazersCount;
 
-  RepositoryModel({this.name, this.language, this.stargazersCount})
+  RepositoryModel({this.name, this.language, this.stargazersCount});
 
   Future<RepositoryModel> setRepos(user) async {
     const String apiGithub = "https://api.github.com/users/";
-    final responseRepos = await http.get(Uri.parse(apiGithub + user + "/repos"));
+    final responseRepos =
+        await http.get(Uri.parse(apiGithub + user + "/repos"));
     final RepositoryModel repos = RepositoryModel.fromJson(responseRepos.body);
     return repos;
   }
