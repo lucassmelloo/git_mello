@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_colors.dart';
+import 'package:git_mello/shared/models/repositories-model.dart';
 
 class RepositoryCard extends StatelessWidget {
-  const RepositoryCard({Key? key}) : super(key: key);
+  final List<RepositoryModel>? repositories;
+  const RepositoryCard({Key? key, this.repositories}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +15,21 @@ class RepositoryCard extends StatelessWidget {
         color: AppColors.white,
         borderRadius: BorderRadius.circular(15),
       ),
-      child: Column(
-        
+      child: GridView.count(
+        primary: false,
+        padding: EdgeInsets.all(8),
+        crossAxisSpacing: 100,
+        mainAxisSpacing: 50,
+        crossAxisCount: 3,
+        children: [
+          Container(
+            width: 10,
+            height: 10,
+            decoration: BoxDecoration(
+                color: AppColors.blue, borderRadius: BorderRadius.circular(15)),
+          ),
+        ],
       ),
     );
   }
-  
 }

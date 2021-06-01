@@ -39,6 +39,9 @@ class OwnerCard extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   )),
+                  SizedBox(
+                    height: 5,
+                  ),
                   Row(
                     children: [
                       Expanded(
