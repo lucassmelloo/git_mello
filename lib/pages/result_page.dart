@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_gradients.dart';
+import 'package:git_mello/shared/models/repositories_model.dart';
 import 'package:git_mello/shared/widgets/repository_card.dart';
 import 'package:git_mello/shared/widgets/owner_card.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
@@ -19,15 +20,17 @@ validationOwner(OwnerModel? owner) {
 
 class _ResultPageState extends State<ResultPage> {
   OwnerModel? owner;
+  List<RepositoryModel>? repositories;
 
   @override
   void initState() {
     super.initState();
-    loadOwner();
+    loadInfos();
   }
 
-  Future loadOwner() async {
+  Future loadInfos() async {
     owner = await OwnerModel().setOwner(widget.userConsult);
+    repositories = await RepositoryModel().setRepos(widget.userConsult);
     setState(() {});
   }
 
@@ -49,7 +52,9 @@ class _ResultPageState extends State<ResultPage> {
                       owner: owner,
                     ),
                     SizedBox(height: 15),
-                    RepositoryCard(),
+                    RepositoryCard(
+                      repositories: repositories,
+                    ),
                   ]),
             ),
           ],
