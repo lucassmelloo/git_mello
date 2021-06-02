@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:http/http.dart' as http;
 
@@ -9,11 +10,12 @@ class RepositoryModel {
 
   RepositoryModel({this.name, this.language, this.stargazersCount});
 
-  Future<RepositoryModel> setRepos(user) async {
+  setRepos(user) async {
     const String apiGithub = "https://api.github.com/users/";
-    final responseRepos =
-        await http.get(Uri.parse(apiGithub + user + "/repos"));
-    final RepositoryModel repos = RepositoryModel.fromJson(responseRepos.body);
+    final response = await http.get(Uri.parse(apiGithub + user + "/repos"));
+    final List<RepositoryModel> repos = (json.decode(response.body) as List)
+        .map((e) => RepositoryModel.fromJson(e))
+        .toList();
     return repos;
   }
 

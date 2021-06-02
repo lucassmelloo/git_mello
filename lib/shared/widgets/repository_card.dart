@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_colors.dart';
-import 'package:git_mello/shared/models/repositories-model.dart';
+import 'package:git_mello/shared/models/repositories_model.dart';
 
 class RepositoryCard extends StatelessWidget {
   final List<RepositoryModel>? repositories;
@@ -15,20 +15,57 @@ class RepositoryCard extends StatelessWidget {
         color: AppColors.white,
         borderRadius: BorderRadius.circular(15),
       ),
-      child: GridView.count(
-        primary: false,
-        padding: EdgeInsets.all(8),
-        crossAxisSpacing: 100,
-        mainAxisSpacing: 50,
-        crossAxisCount: 3,
-        children: [
-          Container(
-            width: 10,
-            height: 10,
-            decoration: BoxDecoration(
-                color: AppColors.blue, borderRadius: BorderRadius.circular(15)),
-          ),
-        ],
+      child: Container(
+        width: 300,
+        height: 500,
+        child: ListView(
+          primary: false,
+          padding: EdgeInsets.all(15),
+          children: [
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+            Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  color: AppColors.blue,
+                  borderRadius: BorderRadius.circular(15)),
+            ),
+          ],
+        ),
       ),
     );
   }
