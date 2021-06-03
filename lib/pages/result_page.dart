@@ -30,7 +30,8 @@ class _ResultPageState extends State<ResultPage> {
 
   Future loadInfos() async {
     owner = await OwnerModel().setOwner(widget.userConsult);
-    repositories = await RepositoryModel().setRepos(widget.userConsult);
+
+    /* repositories = await RepositoryModel().setRepos(widget.userConsult); */
     setState(() {});
   }
 
@@ -52,9 +53,7 @@ class _ResultPageState extends State<ResultPage> {
                       owner: owner,
                     ),
                     SizedBox(height: 15),
-                    RepositoryCard(
-                      repositories: repositories,
-                    ),
+                    RepositoryCard(),
                   ]),
             ),
           ],

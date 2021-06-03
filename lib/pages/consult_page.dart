@@ -83,7 +83,7 @@ class _ConsultPageState extends State<ConsultPage> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text("No user search!"),
+                                    title: Text("No user to search!"),
                                     actions: <Widget>[
                                       TextButton(
                                           onPressed: () {

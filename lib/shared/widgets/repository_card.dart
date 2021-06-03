@@ -9,64 +9,20 @@ class RepositoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 375,
-      height: 575,
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Container(
-        width: 300,
-        height: 500,
-        child: ListView(
-          primary: false,
-          padding: EdgeInsets.all(15),
-          children: [
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-            Container(
-              height: 100,
-              decoration: BoxDecoration(
-                  color: AppColors.blue,
-                  borderRadius: BorderRadius.circular(15)),
-            ),
-          ],
+        width: 375,
+        height: 575,
+        decoration: BoxDecoration(
+          color: AppColors.white,
+          borderRadius: BorderRadius.circular(15),
         ),
-      ),
-    );
+        child: Center(
+          child: Text.rich(TextSpan(
+            text: repositories?.length.toString(),
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          )),
+        ));
   }
 }
