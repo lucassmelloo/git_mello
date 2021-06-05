@@ -53,7 +53,9 @@ class _ResultPageState extends State<ResultPage> {
                       owner: owner,
                     ),
                     SizedBox(height: 15),
-                    RepositoryCard(),
+                    RepositoryCard(
+                      repositories: owner?.repositories,
+                    ),
                   ]),
             ),
           ],

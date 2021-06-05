@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:git_mello/shared/models/repositories_model.dart';
 import 'package:http/http.dart' as http;
 
 class OwnerModel {
@@ -9,6 +10,7 @@ class OwnerModel {
   int? publicrepos;
   int? following;
   int? starred;
+  List<RepositoryModel>? repositories;
 
   OwnerModel(
       {this.login,
@@ -16,7 +18,8 @@ class OwnerModel {
       this.avatarurl,
       this.publicrepos,
       this.following,
-      this.starred});
+      this.starred,
+      this.repositories});
 
   Future<OwnerModel> setOwner(user) async {
     const String apiGithub = "https://api.github.com/users/";
@@ -25,6 +28,11 @@ class OwnerModel {
     final responseStarred =
         await http.get(Uri.parse(apiGithub + user + '/starred'));
     owner.starred = json.decode(responseStarred.body).length;
+    final responseRepositories =
+        await http.get(Uri.parse(apiGithub + user + '/repos'));
+    owner.repositories = (json.decode(responseRepositories.body) as List)
+        .map((e) => RepositoryModel.fromJson(e))
+        .toList();
     return owner;
   }
 
