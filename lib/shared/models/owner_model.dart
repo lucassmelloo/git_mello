@@ -28,11 +28,11 @@ class OwnerModel {
     final responseStarred =
         await http.get(Uri.parse(apiGithub + user + '/starred'));
     owner.starred = json.decode(responseStarred.body).length;
-    final responseRepositories =
+    /* final responseRepositories =
         await http.get(Uri.parse(apiGithub + user + '/repos'));
     owner.repositories = (json.decode(responseRepositories.body) as List)
         .map((e) => RepositoryModel.fromJson(e))
-        .toList();
+        .toList(); */
     return owner;
   }
 

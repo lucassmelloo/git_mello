@@ -32,13 +32,16 @@ class OwnerCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text.rich(TextSpan(
-                    text: owner?.name,
-                    style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
+                  Text.rich(
+                    TextSpan(
+                      text: owner?.name,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  )),
+                    overflow: TextOverflow.ellipsis,
+                  ),
                   SizedBox(
                     height: 5,
                   ),
