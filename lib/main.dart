@@ -9,7 +9,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "GitMello",
+      debugShowCheckedModeBanner: false,
+      title: "Git_Mello",
       home: ConsultPage(),
     );
   }
