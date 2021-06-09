@@ -34,7 +34,7 @@ class OwnerCard extends StatelessWidget {
                 children: [
                   Text.rich(
                     TextSpan(
-                      text: owner?.repositories?[0].name,
+                      text: owner?.name,
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,

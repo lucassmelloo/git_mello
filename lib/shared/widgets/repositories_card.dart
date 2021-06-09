@@ -16,28 +16,14 @@ class RepositoriesCard extends StatelessWidget {
           color: AppColors.white,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: ListView(padding: EdgeInsets.all(10), children: [
-          RepoCard(),
-          SizedBox(
-            height: 10,
-          ),
-          RepoCard(),
-          SizedBox(
-            height: 10,
-          ),
-          RepoCard(),
-          SizedBox(
-            height: 10,
-          ),
-          RepoCard(),
-          SizedBox(
-            height: 10,
-          ),
-          RepoCard(),
-          SizedBox(
-            height: 10,
-          ),
-          RepoCard(),
-        ]));
+        child: ListView.builder(
+            padding: EdgeInsets.all(10),
+            itemCount: repositories?.length,
+            itemBuilder: (BuildContext context, int index) {
+              return RepoCard(
+                  repoTitle: repositories?[index].name,
+                  language: repositories?[index].language,
+                  stars: repositories?[index].stargazersCount);
+            }));
   }
 }
