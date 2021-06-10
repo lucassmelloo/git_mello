@@ -14,6 +14,7 @@ class ResultPage extends StatefulWidget {
   _ResultPageState createState() => _ResultPageState();
 }
 
+/*Colocar OVERLAy*/
 validationOwner(OwnerModel? owner) {
   if (owner != null) return owner;
 }
