@@ -44,10 +44,6 @@ class _SplashPageState extends State<SplashPage> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  widget.userConsult,
-                  style: TextStyle(fontSize: 32),
-                ),
                 LinearProgressIndicator(
                   value: 0.6,
                 ),
