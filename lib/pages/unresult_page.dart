@@ -30,13 +30,13 @@ class UnresultPage extends StatelessWidget {
                             height: 38,
                           ),
                           Text(
-                              "We dont found any user with this username. Try another user!",
+                              "Me desculpe, não encontrei ninguem com esse nome!",
                               style: TextStyle(
                                   fontSize: 28, color: AppColors.white)),
                         ],
                       ),
                       SizedBox(
-                        width: 28,
+                        height: 28,
                       ),
                       Container(
                         width: 200,

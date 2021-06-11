@@ -6,34 +6,16 @@ import 'package:git_mello/shared/widgets/owner_card.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
 class ResultPage extends StatefulWidget {
-  final String userConsult;
+  final OwnerModel owner;
 
-  const ResultPage({Key? key, required this.userConsult}) : super(key: key);
+  const ResultPage({Key? key, required this.owner}) : super(key: key);
 
   @override
   _ResultPageState createState() => _ResultPageState();
 }
 
-/*Colocar OVERLAy*/
-validationOwner(OwnerModel? owner) {
-  if (owner != null) return owner;
-}
-
 class _ResultPageState extends State<ResultPage> {
-  OwnerModel? owner;
   List<RepositoryModel>? repositories;
-
-  @override
-  void initState() {
-    super.initState();
-    loadInfos();
-  }
-
-  Future loadInfos() async {
-    owner = await OwnerModel().setOwner(widget.userConsult);
-
-    setState(() {});
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +32,11 @@ class _ResultPageState extends State<ResultPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     OwnerCard(
-                      owner: owner,
+                      owner: widget.owner,
                     ),
                     SizedBox(height: 15),
                     RepositoriesCard(
-                      repositories: owner?.repositories,
+                      repositories: widget.owner.repositories,
                     ),
                   ]),
             ),
