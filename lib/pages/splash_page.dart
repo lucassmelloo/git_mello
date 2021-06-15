@@ -19,7 +19,7 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   void initState() {
-    /*Pesquisar future*/
+    /*Pesquisar future e super*/
     Future.delayed(Duration(seconds: 2)).then(
         (_) => Navigator.pushReplacement(context, ownerValidation(owner)));
     super.initState();
