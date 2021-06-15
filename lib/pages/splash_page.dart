@@ -19,26 +19,22 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   void initState() {
-    /*Pesquisar future e super*/
-    Future.delayed(Duration(seconds: 2)).then(
-        (_) => Navigator.pushReplacement(context, ownerValidation(owner)));
-    super.initState();
     loadInfos();
-  }
-
-  ownerValidation(OwnerModel? ownerModel) {
-    if (ownerModel == null) {
-      return Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => UnresultPage()));
-    }
-    if (ownerModel.login != null) {
-      return Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => ResultPage(owner: owner!)));
-    }
+    super.initState();
   }
 
   Future loadInfos() async {
     owner = await OwnerModel().setOwner(widget.userConsult);
+
+    if (owner == null) {
+      return Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => UnresultPage()));
+    }
+
+    if (owner != null) {
+      return Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => ResultPage(owner: owner!)));
+    }
 
     setState(() {});
   }
