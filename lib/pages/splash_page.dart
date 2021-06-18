@@ -4,6 +4,7 @@ import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
 import 'package:git_mello/pages/result_page.dart';
 import 'package:git_mello/pages/unresult_page.dart';
+import 'package:git_mello/shared/controllers/owner_controller.dart';
 import 'package:git_mello/shared/models/owner_model.dart';
 
 class SplashPage extends StatefulWidget {
@@ -24,19 +25,14 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   Future loadInfos() async {
-    owner = await OwnerModel().setOwner(widget.userConsult);
-
-    if (owner == null) {
+    if (await OwnerController().ownerExists(widget.userConsult)) {
+      owner = await OwnerController().setOwner(widget.userConsult);
+      return Navigator.pushReplacement(context,
+          MaterialPageRoute(builder: (context) => ResultPage(owner: owner!)));
+    } else {
       return Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => UnresultPage()));
     }
-
-    if (owner != null) {
-      return Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => ResultPage(owner: owner!)));
-    }
-
-    setState(() {});
   }
 
   @override
