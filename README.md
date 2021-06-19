@@ -18,7 +18,7 @@ Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado d
 - [x] Splash page ( Definir proxima pagina por Status de Req. HTTP[UnresultPage ou ResultPage])
 - [x] Unresult page (Tela sem resultado)
 - [x] Result page (Tela de resultado: OwnerCard, RepositoriesCard e RepositoryCard)
-- [x] OwnerCard (ResultPage widget, onde estão os dados do perfil do usuario)
+- [x] OwnerCard (Onde estão os dados do perfil do usuario)
 - [x] Repositoriescard (ResultPage widget-> ListView.builder de RepositoryCard, com a quantidade de repositorios que o usuario tem)
 - [x] RepositoryCard (Widget de cada repositorio do Owner)
 - [x] OwnerModel (Estrutura do Objeto Owner)
