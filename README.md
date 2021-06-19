@@ -15,7 +15,7 @@ Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado d
 
 - [x] Construir logo (Contruido no Figma + PhotoShop)
 - [x] Consult page (Construida com TextField + Gradient)
-- [x] Splash page ( Chamada de controller, Status de requisição HTTP definir proxima pagina (UnresultPage ou ResultPage))
+- [x] Splash page ( Definir proxima pagina por Status de Req. HTTP (UnresultPage ou ResultPage))
 - [x] Unresult page (Tela sem resultado)
 - [x] Result page (Tela de resultado: OwnerCard, RepositoriesCard e RepositoryCard)
 - [x] OwnerCard (ResultPage widget, onde estão os dados do perfil do usuario)
