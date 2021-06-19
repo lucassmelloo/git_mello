@@ -2,6 +2,8 @@
 
 # git.mello
 
+<img src"/assets/images/logo.png">
+
 Bem vindo ao Git.Mello, meu primeiro projeto pessoal! A ideia principal do projeto é testar meu conhecimento em programação tambem aprender meu primeiro FrameWork!
 
 ## Proposta do Git.Mello
