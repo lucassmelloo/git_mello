@@ -1,16 +1,29 @@
+
+
 # git.mello
 
-Um projeto em Flutter para a vizualização de perfis do github
+Bem vindo ao Git.Mello, meu primeiro projeto pessoal! A ideia principal do projeto é testar meu conhecimento em programação tambem aprender meu primeiro FrameWork!
 
-## Etapas de conclusão!
+## Proposta do Git.Mello
+Ser um aplicativo leve, para consultas rapidas de perfis do GitHub com uma interface intuitiva e pratica!
 
-- [x] Consult page (Tela de consulta)
-- [x] Splash page (Tela de carregamento)
-- [x] Unresult page (Tela de resultado)
-- [x] Result page (Tela de resultado)
-- [x] Usercard (Result page widget)
-- [x] Repositorycard (Result page widget)
-- [x] Read from JSON (Utilizar a leitura por JSON)
-- [x] Integration with Github api (Integrar a aplicação com a API do Github)
-- [x] Final (Finalizando a aplicação!)
+## Por que Flutter?
+A escolha do framework veio durante o evento Next Level Week da RocktSeat :rocket:! , aonde tive meu primeiro contato com a tecnologia.
+Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado da tecnologia, muito didatica e facil de aprender então achei ideal para um iniciante como eu!
 
+## Etapas do Projeto!
+
+- [x] Construir logo (Contruido no Figma + PhotoShop)
+- [x] Consult page (Construida com TextField + Gradient)
+- [x] Splash page ( Chamada de controller, Status de requisição HTTP definir proxima pagina (UnresultPage ou ResultPage))
+- [x] Unresult page (Tela sem resultado)
+- [x] Result page (Tela de resultado: OwnerCard, RepositoriesCard e RepositoryCard)
+- [x] OwnerCard (ResultPage widget, onde estão os dados do perfil do usuario)
+- [x] Repositoriescard (ResultPage widget-> ListView.builder de RepositoryCard, com a quantidade de repositorios que o usuario tem)
+- [x] RepositoryCard (Widget de cada repositorio do Owner)
+- [x] OwnerModel (Estrutura do Objeto Owner)
+- [x] RepositoryModel (Estrutura do Objeto Repository)
+- [x] OwnerController (Conexão com a API do GitHub)
+
+### Autor: 
+Lucas de Mello Vieira (Mello)
