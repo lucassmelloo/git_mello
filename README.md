@@ -14,8 +14,8 @@ Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado d
 ## Etapas do Projeto!
 
 - [x] Construir logo (Contruido no Figma + PhotoShop)
-- [x] Consult page (Construida com TextField + Gradient)
-- [x] Splash page ( Definir proxima pagina por Status de Req. HTTP (UnresultPage ou ResultPage))
+- [x] Consult page (TextField + Gradient)
+- [x] Splash page ( Definir proxima pagina por Status de Req. HTTP[UnresultPage ou ResultPage])
 - [x] Unresult page (Tela sem resultado)
 - [x] Result page (Tela de resultado: OwnerCard, RepositoriesCard e RepositoryCard)
 - [x] OwnerCard (ResultPage widget, onde estão os dados do perfil do usuario)
