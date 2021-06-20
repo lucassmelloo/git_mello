@@ -32,19 +32,21 @@ Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado d
 
 ### ConsulPage:
 
-<img src = "/readme/images/consultpage.png" width = 200>
+<img src = >
+
+<img src = "/readme/images/consultpage.jpg" width = 200>
 
 ### SplashPage:
 
-<img src = "/readme/images/splashpage.png" width = 200>
+<img src = "/readme/images/splashpage.jpg" width = 200>
 
 ### UnresultPage:
 
-<img src = "/readme/images/unresultpage.png" width = 200>
+<img src = "/readme/images/unresultpage.jpg" width = 200>
 
 ### ResultPage:
 
-<img src = "/readme/images/resultpage.png" width = 200>
+<img src = "/readme/images/resultpage.jpg" width = 200>
 
 
 ### Autor: 
