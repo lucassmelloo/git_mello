@@ -32,8 +32,6 @@ Um dos diferenciais que percebi durante esse evento foi a curva de aprendizado d
 
 ### ConsulPage:
 
-<img src = >
-
 <img src = "/readme/images/consultpage.jpg" width = 200>
 
 ### SplashPage:
