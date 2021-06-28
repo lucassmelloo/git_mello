@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:git_mello/core/app_colors.dart';
 
 class RepoCard extends StatelessWidget {
-  String? repoTitle;
-  String? language;
-  int? stars;
+  final String? repoTitle;
+  final String? language;
+  final int? stars;
   RepoCard({Key? key, this.repoTitle, this.language, this.stars})
       : super(key: key);
 

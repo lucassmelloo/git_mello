@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:git_mello/core/app_colors.dart';
 
 import 'package:git_mello/core/app_gradients.dart';
 import 'package:git_mello/core/app_images.dart';
@@ -45,19 +47,19 @@ class _SplashPageState extends State<SplashPage> {
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Stack(
               children: [
-                Image.asset(
-                  AppImages.logo,
-                  width: 250,
+                Center(
+                  child: SpinKitDualRing(
+                    color: AppColors.blue,
+                    size: 350,
+                  ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                LinearProgressIndicator(
-                  value: 0.6,
+                Center(
+                  child: Image.asset(
+                    AppImages.logo,
+                    width: 250,
+                  ),
                 ),
               ],
             ),
