@@ -45,36 +45,18 @@ class OwnerCard extends StatelessWidget {
                   SizedBox(
                     height: 5,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 4,
-                        child: Text.rich(
-                          TextSpan(
-                            text: owner?.login,
-                            style: TextStyle(fontSize: 20),
-                          ),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Icon(
-                          Icons.star_border,
-                          color: AppColors.gradientoragen,
-                        ),
-                      ),
-                      Text.rich(
+                  Row(children: [
+                    Expanded(
+                      flex: 4,
+                      child: Text.rich(
                         TextSpan(
-                          text: owner?.starred.toString(),
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          text: owner?.login,
+                          style: TextStyle(fontSize: 20),
                         ),
+                        overflow: TextOverflow.ellipsis,
                       ),
-                    ],
-                  ),
+                    ),
+                  ]),
                   SizedBox(
                     height: 10,
                   ),
